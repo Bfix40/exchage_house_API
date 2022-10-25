@@ -29,7 +29,9 @@ class TrackFee(models.Model):
     
     fee_amount = models.FloatField()
     date_transaction = models.CharField(max_length=255)
-    base_currency = models.FloatField()
-    quote_currency = models.FloatField()
+    base_currency = models.ForeignKey(
+        Currency, on_delete=models.SET_NULL, null=True, related_name='base')
+    quote_currency = models.ForeignKey(
+        Currency, on_delete=models.SET_NULL, null=True, related_name='quote')
     
     

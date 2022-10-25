@@ -28,9 +28,9 @@ class CurrencySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Currency
-        fields = ["name", "exchange", "fee_percentage", "quantity"]
+        exclude = ('id_currency',)
 
-class TrackFeeSerializer(serializers.ModelSerializer):
+class TrackFeeSerializer(serializers.Serializer):
 
     class Meta:
         model = TrackFee
