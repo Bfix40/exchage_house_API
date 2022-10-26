@@ -59,4 +59,5 @@ urllib3==1.26.11
 vine==1.3.0
 wcwidth==0.2.5
 Werkzeug==2.2.2
+whitenoise
 zipp==3.8.1
